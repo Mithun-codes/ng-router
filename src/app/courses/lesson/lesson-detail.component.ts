@@ -22,6 +22,8 @@ export class LessonDetailComponent implements OnInit {
   ngOnInit() {
     this.lesson$ = this.route.data.pipe(map(data => data["lessons"]));
     // this.lesson = this.route.snapshot.data["lesson"]; // This is not fetching latest resolver data
+
+
   }
 
 
