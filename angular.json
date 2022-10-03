@@ -20,6 +20,9 @@
               "src/assets",
               "src/favicon.ico"
             ],
+            "allowedCommonJsDependencies": [
+              "moment"
+            ],
             "styles": [
               "src/styles.scss"
             ],

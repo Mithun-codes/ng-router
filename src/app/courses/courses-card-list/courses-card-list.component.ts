@@ -1,8 +1,9 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Host, Input, OnInit, Output} from '@angular/core';
 import {Course} from '../model/course';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {CourseDialogComponent} from '../course-dialog/course-dialog.component';
 import {filter, tap} from 'rxjs/operators';
+import {HomeComponent} from '../home/home.component';
 
 @Component({
   selector: 'courses-card-list',
@@ -17,12 +18,12 @@ export class CoursesCardListComponent implements OnInit {
   @Output()
   private coursesChanged = new EventEmitter();
 
-  constructor(private dialog: MatDialog) {
+  constructor(private dialog: MatDialog, @Host() public parent: HomeComponent) {
 
   }
 
   ngOnInit() {
-
+    // console.log(this.parent);
   }
 
     editCourse(course: Course) {

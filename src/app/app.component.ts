@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthStore} from './services/auth.store';
+import {Router} from '@angular/router';
 
 
 
@@ -10,7 +11,7 @@ import {AuthStore} from './services/auth.store';
 })
 export class AppComponent implements  OnInit {
 
-    constructor(public auth: AuthStore) {
+    constructor(public auth: AuthStore, private router: Router) {
 
     }
 
