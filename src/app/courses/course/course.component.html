@@ -1,0 +1,16 @@
+<ng-container>
+
+    <html class="course">
+
+        <h2>{{course.description}}</h2>
+
+        <h3 class="discount" *ngIf="couponCode">Use {{couponCode}} for a huge discount!</h3>
+        <!-- <h3 class="discount" *ngIf="(couponCode$ | async) as code">Use {{code}} for a huge discount!</h3> -->
+
+        <img class="course-thumbnail" [src]="course.iconUrl" *ngIf="course">
+
+        <router-outlet></router-outlet>
+
+    </html>
+
+</ng-container>
